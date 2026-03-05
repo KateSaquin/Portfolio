@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <div class="Upper">
+      <p>Portfolio</p>
+    </div>
+
+    <div id="header">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="Boom">
+        <h2>
+          Hi, I am <br />
+          Kate Saquin
+        </h2>
+        <p>Computer Science Student</p>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="colu-1">
+            <div class="photo-card">
+              <img src="images/me.jpg" alt="Me" />
+            </div>
+          </div>
+
+          <div class="colu-2">
+            <h1>About Me</h1>
+
+            <p class="about-text">
+              I’m a self-driven learner who enjoys building projects and continuously<br>
+              improving my skills in HTML, CSS, JavaScript, PHP, and Java. I focus on<br>
+              strengthening my programming fundamentals and understanding how systems <br>
+              work behind the scenes. I have a growing interest in Cybersecurity and <br>
+              aspire to become a White Hat Hacker, committed to protecting systems <br>
+              and identifying vulnerabilities ethically. Beyond coding, I enjoy <br>
+              reading Stoic philosophy and practicing self-improvement, which has <br>
+              helped me develop resilience and discipline. I also enjoy playing games, <br>
+              as they sharpen my strategic thinking while giving me time to recharge <br> 
+              and refocus.
+            </p>
+
+            <div class="Titles">
+              <p
+                class="tab-links active-link"
+                onclick="opentab(event, 'skills')"
+              >
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab(event, 'education')">
+                Education
+              </p>
+            </div>
+
+            <div class="contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
+              </ul>
+            </div>
+
+            <div class="contents" id="education">
+              <ul>
+                <li>
+                  <span>2025-2026 Current</span><br />Mapua Malayan Colleges
+                  Mindanao
+                </li>
+                <li>
+                  <span>2022-2025</span><br />Mapua Malayan Colleges Mindanao
+                </li>
+                <li>
+                  <span>2012-2022</span><br />Holy Child College of Davao
+                </li>
+                <li><span>2010-2012</span><br />Ebenezer Christian School</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS SECTION -->
+
+    <div id="projects">
+      <div class="container">
+        <h1 class="projects-title">Projects</h1>
+
+        <div class="projects-grid">
+          <div class="Proj1">
+            <img src="images/proj1.gif" alt="Project 1" />
+          </div>
+
+          <div class="Proj2">
+            <img src="images/proj2.gif" alt="Project 2" />
+          </div>
+
+          <div class="prod"> 
+            <h2>SensoVenture</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACHIEVEMENTS SECTION -->
+
+<div id="achievements">
+  <div class="container">
+
+    <h1 class="achievement-title">Achievements</h1>
+
+    <div class="achievement-grid">
+
+      <div class="ach-card">
+
+        <div class="ach-image">
+          <img src="images/achieve1.jpg" alt="Achievement 1">
+        </div>
+
+        <p class="ach-caption">Best UX/UI Design</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var contents = document.getElementsByClassName("contents");
+
+      function opentab(e, tabname) {
+        for (let tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (let tabcontent of contents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        e.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
